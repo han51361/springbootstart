@@ -22,6 +22,7 @@
   * Bean은 두 단계로 나눠서 읽힌다.
     - 1 : @ComponentScan
     - 2 : @EnableAutoConfiguration
+    - `똑같은 빈을 다르게 등록한다면 AutoConfiguration이 앞의 ComponentScan이 등록한 빈을 덮어 쓴다`
     
     
   * @ComponentScan : component 어노테이션을 가진 애들은 스캔하여 bean으로 등록 
@@ -42,4 +43,36 @@
     - @Configuration
     - @ConditionalOn~~~ : 조건부여 
    
+   
+- 자동 설정 구현 
+  - Xxx-Spring-Boot-`Autoconfigure` 모듈 : 자동 설정
+  - Xxx-Spring-Boot-Starter 모듈 : 필요한 의존성 정의 
   
+  - 설정 순서 
+    1. pom.xml 에 dependency 추가
+    2. @Configuration 파일 작성
+    3. src/main/resource/META-INF에 spring.factories 파일 만들기
+    4. spring.factories 안에 자동 설정 파일 추가 
+    5. mvn install
+    
+    - ####`똑같은 빈을 다르게 등록한다면 AutoConfiguration이 앞의 ComponentScan이 등록한 빈을 덮어 쓴다`
+    - ####`"ComponentScan이 등록한 빈이 더 우선시 되어야한다"`
+   * 덮어쓰기 방지하기
+   
+      * @ConditionalOnMissingBean
+   * 빈 재정의에 대한 수고 덜기 
+     - @ConfigurationProperties("Holoman")
+     - @EnableConfigurationProperties("HolomanProperties")
+     - 프로퍼티 키 값 자동 완
+     
+    
+   -  ####  내장 서블릿 컨테이너
+   
+      - 스프링 부트는 서버가 아니다.
+        - 톰캣 객체 생성
+        - 포트 설정
+        - 톰켓에 컨텍스트 추가
+        - 서블릿 만들기
+        - 톰켓에 서블릿 추가
+        - 컨텍스트에 서블릿 맵핑
+      - 이 모든 과정을 보다 유연하게 설정 및 실행 -> 스프링 부트 자동설정
