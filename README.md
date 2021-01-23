@@ -76,3 +76,16 @@
         - 톰켓에 서블릿 추가
         - 컨텍스트에 서블릿 맵핑
       - 이 모든 과정을 보다 유연하게 설정 및 실행 -> 스프링 부트 자동설정
+      
+      
+### 4부 . 스프링 부트 활용
+
+  - ApplicationEvent 등록 
+    - applicationContext 만들기 전에 사용하는 리스너는 @Bean으로 등록할 수 없다.
+        - SpringApplication.addListners()로 실행
+  - WebApplication Type 설정
+  - 애플리케이션 아규먼트 사용하기
+    - ApplicationArgument를 빈으로 등록해주니까 가져다 쓰면 된다.
+  - 애플리케이션 실행한 뒤 뭔가 실행해야 한다면
+    - ->` ApplicationRunner` OR  CommandLineRunner
+    - 순서 지정 -> @Order
