@@ -89,3 +89,7 @@
   - 애플리케이션 실행한 뒤 뭔가 실행해야 한다면
     - ->` ApplicationRunner` OR  CommandLineRunner
     - 순서 지정 -> @Order
+    
+  -  ### 외부설정
+     - properties / YAML / 환경 변수 / 커맨드 라인 아규먼트
+      
