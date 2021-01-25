@@ -63,7 +63,7 @@
    * 빈 재정의에 대한 수고 덜기 
      - @ConfigurationProperties("Holoman")
      - @EnableConfigurationProperties("HolomanProperties")
-     - 프로퍼티 키 값 자동 완
+     - 프로퍼티 키 값 자동 완성 
      
     
    -  ####  내장 서블릿 컨테이너
@@ -92,4 +92,19 @@
     
   -  ### 외부설정
      - properties / YAML / 환경 변수 / 커맨드 라인 아규먼트
-      
+     - 타입-세이프 프로퍼티 @ConfigurationProperties
+        - 여러 프로퍼티를 묶어서 읽을 수 있다.
+        - 빈으로 등록하여 다른 빈에 주입할 수 있다
+            - @EnableConfigurationProperties
+            - ` @Component`
+            - @Bean
+        - 융통성 있는 바인딩
+            - context-path(케밥)
+            - context_path(언더스코어)
+            - contextPath(카멜)
+            - CONTEXTPATH
+        - 프로퍼티 타입 컨버젼
+            - @DurationUnit
+        - 프로퍼티 값 검증
+            - @Validated
+            - @JSR-303
