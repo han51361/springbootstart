@@ -108,3 +108,12 @@
         - 프로퍼티 값 검증
             - @Validated
             - @JSR-303
+            
+  - ### 프로파일
+    - @Profile 위치 
+        - @Configuration
+        - @Component
+    - 어떤 프로파일을 활성화 할 것인가
+        - spring.profiles.active
+        - spring.profiles.include(어떤 프로퍼티를 추가할 것인가)
+        

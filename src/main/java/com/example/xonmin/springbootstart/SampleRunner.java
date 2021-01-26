@@ -12,11 +12,15 @@ public class SampleRunner implements ApplicationRunner {
    @Autowired
    XonminProperties xonminProperties;
 
+    @Autowired
+    public String hello;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println(xonminProperties.getName());
         System.out.println(xonminProperties.getAge());
         System.out.println(xonminProperties.getFullName());
         System.out.println(xonminProperties.getSessionTimeout());
+        System.out.println(hello);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.xonmin.springbootstart;
 
-import com.apple.eawt.Application;
+
 import com.example.xonmin.springbootstart.demo.Holoman;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
