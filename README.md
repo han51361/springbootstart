@@ -117,3 +117,29 @@
         - spring.profiles.active
         - spring.profiles.include(어떤 프로퍼티를 추가할 것인가)
         
+        
+  - ### 로깅
+  
+    - 로깅 퍼사드 vs 로거 
+    - SLF4j(심플로깅퍼사) , Commons Logging (로깅 퍼사드)
+    - 로깅 퍼사드의 장점 : log 를 바꿔쓸 수 있어서 , 프레임을 쓰는 애플리케이션에서 로그를 원하는 걸로 바꿀 수 있다. 
+    
+    - Spring - JCL 
+        - Commons Logging -> SLF4j 
+        - pom.xml 에 exclusion 안해도 됌 
+        
+    - 스프링 부트 로깅
+       - 기본 포맷
+       - --debug : 일부 핵심 라이브러리맘ㄴ 디버깅 모드로
+       - --trace : 전부 다 디버깅 
+       - 컬러 출력 : SPring.output.ansi.enabled( 기본은 콘솔에만 출력함 )
+       - 파일 출력 : Logging.file (파일 지정)또는 logging.path(디렉토리 경로 설정)
+       - 로그 레벨 조정 : Logging.level 패키지 = 로그 레벨 
+       
+       
+  -  로그 : 커스텀 로그 설정 파일 사용하기
+    - Logback : logback-spring.xml
+    - Log4J2 : log4j2-spring.xml
+    - Logback extension : 프로파일 <springProfile name ="프로파일">
+    
+        

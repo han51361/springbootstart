@@ -1,5 +1,8 @@
 package com.example.xonmin.springbootstart;
 
+import org.apache.juli.logging.LogFactory;
+import org.apache.logging.log4j.Logger;
+import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -11,6 +14,8 @@ public class SampleRunner implements ApplicationRunner {
 
    @Autowired
    XonminProperties xonminProperties;
+
+   private Logger logger = (Logger) LoggerFactory.logger(SampleRunner.class);
 
     @Autowired
     public String hello;
