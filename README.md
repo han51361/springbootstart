@@ -142,4 +142,21 @@
     - Log4J2 : log4j2-spring.xml
     - Logback extension : 프로파일 <springProfile name ="프로파일">
     
+    
+  - 테스트 
+    - @SpringBootTest
+        - @Runwith(SpringRunner.class) 와 함꼐 사용
+        - 빈 설정 파일은 알아서 찾는다.
+        - webEnvironment
+            - MOCK : mock servlet environment 내장 톰캣 구동 안함
+            - RANDON_PORT, DEFINED_PORT : 내장 톰캣 사용 
+            - NONE  : 서블릿 환경 제공 안 함.
+    
+    - MockBean 
+        - ApplicationContext에 들어있는 빈을 Mock으로 만든 객체로 교체 함.
+        - 모든 @Test 마다 자동으로 리셋
+    
+    
+   
+    
         
