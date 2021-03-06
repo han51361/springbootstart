@@ -79,6 +79,14 @@
       
       - ##### 서블릿 컨테이너를 만드는 것과 서블릿을 만드는 것이 나뉘어서 작동함
       
+   - ### Spring 웹 MVC
+     - 자동 설정으로 제공하는 여러 기본 기능
+     - Spring MVC 확장
+        - @Configuration + WebMvcConfigurer
+     - Spring MVC 재정의
+        - @Configuration + @EnableWebMvc
+      
+      
 ### 4부 . 스프링 부트 활용
 
   - ApplicationEvent 등록 

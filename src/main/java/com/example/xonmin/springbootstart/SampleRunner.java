@@ -15,7 +15,7 @@ public class SampleRunner implements ApplicationRunner {
    @Autowired
    XonminProperties xonminProperties;
 
-   private Logger logger = (Logger) LoggerFactory.logger(SampleRunner.class);
+
 
     @Autowired
     public String hello;
